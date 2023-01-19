@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BlackJack</title>
+</head>
+
+<body class="bodyBj">
+
+    <main class="mainBj">
+
+        <div class="containerGame">
+
+            <div class="avatarIa avatar">
+
+                <h2 class="name1">Anonymus</h2>
+
+                <div class="iaCardPts">
+
+                    <h2 id="iaHandPts"></h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="playground">
+
+                <div class="playgIa">
+
+                    <div id="cardsIa" class="cardsIa">
+
+
+                    </div>
+
+                </div>
+
+                <div id="betHolder" class="betHolder">
+
+                </div>
+
+                <div class="playgPlayer">
+
+                    <div id="cardsPlayer" class="cardsPlayer">
+
+                    </div>
+
+                    <div id="bets" class="betPlayer">
+
+                        <img id="coin-1"  src="./sources/img/COINS/coin-1.png" width="32px" alt="" >
+                        <img id="coin-5"  src="./sources/img/COINS/coin-5.png" width="32px" alt="">
+                        <img id="coin-10"  src="./sources/img/COINS/coin-10.png" width="32px" alt="">
+                        <img id="coin-50"  src="./sources/img/COINS/coin-50.png" width="32px" alt="">
+                        <img id="coin-100"  src="./sources/img/COINS/coin-100.png" width="32px" alt="">
+                        <img id="coin-500"  src="./sources/img/COINS/coin-500.png" width="32px" alt="">
+                    </div>
+
+                    <div class="actions">
+
+                        <button id="hit" hidden>HIT</button>
+                        <button id="stand" hidden>STAND</button>
+                        <button id="double" hidden>DOUBLE</button>
+                        <button id="bet">BET</button>
+                        <button id="restart" hidden>RESTART</button>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            
+            <div class="avatarPlayer avatar">
+
+                <div class="playerCardPts">
+
+                    <h2 id="playerHandPts"></h2>
+
+                </div>
+
+                <div class="containerTags">
+
+                    <h2 class="name2">Player for now</h2>
+                    <h2 class="coinsPlayer">Coins: <span id="startCoins">1000</span></h2>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </main>
+    
+    <script src="./js/blackjack.js"></script>
+</body>
+
+</html>

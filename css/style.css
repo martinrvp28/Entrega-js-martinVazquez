@@ -1,0 +1,469 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: pixelLetter;
+    src: url(../fonts/SyneMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: pixelLetter2;
+    src: url(../fonts/VT323-Regular.ttf);
+}
+
+
+/*HOME WANNA PLAY A GAME?*/*
+
+.bodyHome{
+    background-image: url(../sources/img/tv3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 480px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+
+color:#ffffff;
+font-family: pixelLetter2;
+  font-size:90px;
+  animation: text-flicker 3s linear infinite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+#offset{
+    animation: letter-flicker 2s linear infinite;
+}
+
+
+/*BLACKJACK GAME*/
+
+.bodyBj{
+  max-width: 480px;
+}
+
+.mainBj{
+  max-width: 480px;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.containerGame{
+  width: 440px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 8% 84% 8%;
+  font-family: PixelLetter2;
+  letter-spacing: 6px;
+  
+}
+
+
+  
+
+.avatarIa{
+  display: grid;
+  grid-template-columns: 75% 25%;
+  
+}
+
+.iaCardPts{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#iaHandPts{
+  color: white;
+  font-family: pixelLetter2;
+  font-size: 300%;
+  animation: letter-flicker 2s linear infinite;
+  
+}
+
+#playerCard{
+  margin-right: -40px;
+}
+
+#playerCard img:hover{
+  width: 85px;
+  margin-top: -10px;
+}
+
+button{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 2px;
+}
+
+button:hover{
+  background-color: white;
+  color: black;
+
+}
+#iaCard{
+  margin-right: -40px;
+}
+
+#iaCard img:hover{
+  width: 85px;
+}
+
+.playerCardPts{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playerHandPts{
+
+  color: white;
+  font-family: pixelLetter2;
+  font-size: 300%;
+  animation: letter-flicker 3.5s linear infinite;
+
+}
+
+#hiddenCard{
+  margin-right: -40px;
+  
+}
+
+#hiddenCard img:hover{
+  width: 85px;
+}
+
+.name1{
+  color: white;
+  margin: 15px;
+  font-size: 125%;
+}
+
+.avatarPlayer{
+  display: grid;
+  grid-template-columns: 25% 75%;
+
+}
+
+.containerTags{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 5px;
+
+  }
+
+.name2{
+  color: white;
+  margin: 5px 15px 5px 15px;
+  font-size: 125%;
+
+}
+
+.coinsPlayer{
+  color: white;
+  letter-spacing: 3px;
+  font-size: 100%;
+  margin-right: 50px;
+}
+
+.playground{
+  display: grid;
+  grid-auto-rows: 45% 10% 45%;
+}
+
+  
+    .betHolder{
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      
+    }
+ 
+
+
+.playgIa{
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+
+.playgPlayer{
+  display: grid;
+  grid-template-rows: 70% 15% 15%;
+  border: 1px solid white;
+}
+
+.cardsPlayer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: -40px;
+
+
+}
+
+.cardsPlayer img{
+  width: 70px;
+}
+
+.cardsIa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: -40px;
+}
+
+.cardsIa img{
+  width: 70px;
+}
+
+.betPlayer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.betPlayer img:hover{
+  width: 40px;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.hidd{
+  display: none;
+}
+
+
+/* PREGUNTA NOMBRE */
+
+.bodyAsk{
+  max-width: 480px;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  gap: 10px;
+}
+
+.bodyAsk h1{
+  font-size: 50px;
+}
+
+.bodyAsk input[type='text'] {
+  font-family: pixelLetter2;
+  letter-spacing: 10px;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+
+}
+
+.send{
+
+  font-family: pixelLetter2;
+  color: white;
+  border-bottom: 0.5px solid white;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  margin-top: 4px;
+  background-color: transparent;
+
+
+}
+
+
+/*ANIMACIONES*/
+
+@keyframes text-flicker {
+    0% {
+      opacity:0.1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    
+    2% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    8% {
+      opacity:0.1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    9% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    12% {
+      opacity:0.1;
+      text-shadow: 0px 0px rgb(0, 0, 0);
+    }
+    20% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0)
+    }
+    25% {
+      opacity:0.3;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0)
+    }
+    30% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0)
+    }
+    
+    70% {
+      opacity:0.7;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0)
+    }
+    
+    72% {
+      opacity:0.2;
+      text-shadow:0px 0px 29px rgb(0, 0, 0)
+    }
+    
+    77% {
+      opacity:.9;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0)
+    }
+    100% {
+      opacity:.9;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0)
+    }
+  }
+  
+  
+  @keyframes letter-flicker {
+    0% {
+      opacity:0.1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    2% {
+      opacity:0.1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    4% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    
+    
+    19% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    21% {
+      opacity:0.1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    23% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    
+    80% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    83% {
+      opacity:0.4;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+    87% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgb(0, 0, 0);
+    }
+  }
+
+
+  /* ANIMACION IMPUT NEON */
+  
+  
+  :root {
+  --neon-main: #F7F3F7;
+  --neon-shadow: #9d1212;
+  --neon-main-glitch: #ffffffc2;
+  --neon-text-glitch: #ffffff88;
+  --neon-shadow-glitch: rgba(112, 1, 1, 0.76);
+}
+
+.neon-label_disabled {
+  color: var(--neon-main-glitch);
+  text-shadow: 0 0 0px var(--neon-shadow);
+  animation: none;
+}
+
+
+.neon-input {
+  border-radius: 25px;
+  width: 60%;
+  box-shadow: 0px 0px 15px 4px var(--neon-shadow), inset 0px 0px 15px 4px var(--neon-shadow);
+  border: 3px solid var(--neon-main);
+  background-color: transparent;
+  color: var(--neon-main);
+  outline: none !important;
+  padding: 7px 20px;
+  animation: neon-input-glitch 3s steps(1) infinite;
+  font-style: pixelLetter2;
+}
+
+.neon-input:focus {
+  box-shadow: 0px 0px 30px 10px var(--neon-shadow), inset 0px 0px 15px 7px var(--neon-shadow);
+  animation: none;
+}
+
+@keyframes neon-input-glitch {
+  0% {
+    box-shadow: 0px 0px 15px 4px var(--neon-shadow), inset 0px 0px 15px 4px var(--neon-shadow);    
+  }
+  
+  85% {
+    box-shadow: 0px 0px 15px 4px var(--neon-shadow), inset 0px 0px 15px 4px var(--neon-shadow);
+  }
+  
+  90% {
+    box-shadow: 0px 0px 10px 4px var(--neon-shadow-glitch), inset 0px 0px 10px 4px var(--neon-shadow-glitch);
+  }
+  
+  100% {
+    box-shadow: 0px 0px 15px 4px var(--neon-shadow), inset 0px 0px 15px 4px var(--neon-shadow);
+  }
+}
+
+
