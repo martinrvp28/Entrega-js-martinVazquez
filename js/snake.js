@@ -66,7 +66,7 @@ function play(){
         board.fillRect(snakePieces[i][0], snakePieces[i][1], placeSize, placeSize);
     }
 
-    if (xSnake < 0 || xSnake > cols*placeSize || ySnake < 0 || ySnake > rows*placeSize) {
+    if (xSnake < 0 || xSnake >= cols*placeSize || ySnake < 0 || ySnake >= rows*placeSize) {
         gameOver = true;
         
 
