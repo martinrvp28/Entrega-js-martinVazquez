@@ -15,6 +15,11 @@
     src: url(../fonts/VT323-Regular.ttf);
 }
 
+@font-face {
+  font-family: codebar;
+  src: url(../fonts/LibreBarcode39Extended-Regular.ttf);
+}
+
 
 /*HOME WANNA PLAY A GAME?*/*
 
@@ -29,7 +34,56 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
 }
+
+.bodyHome h2{
+  
+  color: rgb(255, 255, 255);
+  font-family: pixelLetter2;
+  font-size: 200%;
+  max-width: 480px;
+  width: 25px;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid #212121;
+	animation: cursor 1s step-start infinite, 
+  text2 4s steps(18) alternate infinite;
+  position: absolute;
+  top: 150px;
+}
+
+.options{
+
+display: flex;
+gap: 10px;
+
+}
+
+.options button{
+
+  font-family: pixelLetter2;
+  font-size: 130%;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(12, 0, 0);
+  padding: 2px 5px 2px 5px;
+  background-color: white;
+
+}
+
+.options button:hover{
+
+  background-color: black;
+  color: white;
+}
+
+
+
 
 h1{
 
@@ -45,6 +99,10 @@ font-family: pixelLetter2;
   
 }
 
+h3{
+  color: white;
+}
+
 #offset{
     animation: letter-flicker 2s linear infinite;
 }
@@ -54,6 +112,16 @@ font-family: pixelLetter2;
 
 .bodyBj{
   max-width: 480px;
+  min-height: 100vh;
+}
+
+.bodyGameOver{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
+  transition: background-color 1s linear;
 }
 
 .mainBj{
@@ -65,6 +133,43 @@ font-family: pixelLetter2;
   justify-content: center;
 
 
+}
+
+.gameOverFx{
+  color: black;
+  font-family: pixelLetter2;
+  font-size: 460%;
+  max-width: 275px;
+  width: 21.5ch;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid #212121;
+	animation: cursor 1s step-start infinite, 
+    text 6s steps(18) alternate infinite;
+}
+
+@keyframes cursor {
+	0%, 100% { 
+    border-color: #212121; 
+  }
+}
+
+@keyframes text {
+	0% { 
+    width: 0; 
+  }
+	100% { 
+    width: 21.5ch; 
+  }
+}
+
+@keyframes text2 {
+	0% { 
+    width: 0; 
+  }
+	100% { 
+    width: 28ch; 
+  }
 }
 
 .containerGame{
@@ -177,7 +282,7 @@ button:hover{
 
 .name2{
   color: white;
-  margin: 5px 15px 5px 15px;
+  margin: 5px 50px 5px 15px;
   font-size: 125%;
 
 }
@@ -186,7 +291,7 @@ button:hover{
   color: white;
   letter-spacing: 3px;
   font-size: 100%;
-  margin-right: 50px;
+  margin-right:5px;
 }
 
 .playground{
@@ -274,7 +379,7 @@ button:hover{
 .bodyAsk{
   max-width: 480px;
   height: 100vh;
-  background-color: black;
+  background-color: rgb(4, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -411,6 +516,37 @@ button:hover{
     }
   }
 
+  @keyframes letter-flicker2 {
+    0% {
+      opacity:0.1;   
+    }
+    2% {
+      opacity:0.1;
+    }
+    4% {
+      opacity:1;
+    }
+    
+    19% {
+      opacity:1;
+     }
+    21% {
+      opacity:0.1;
+    }
+    23% {
+      opacity:1;
+    }
+    80% {
+      opacity:1;
+    }
+    83% {
+      opacity:0.4;
+    }
+    87% {
+      opacity:1;
+
+    }
+  }
 
   /* ANIMACION IMPUT NEON */
   
@@ -467,3 +603,160 @@ button:hover{
 }
 
 
+
+#snakeBody{
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  max-width: 480px;
+  height: 100vh;
+}
+
+#snakeBody h1{
+  color: black;
+}
+
+.containerCanvas{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.containerCanvas h3{
+  
+  color: black;
+}
+
+.gameStats{
+  display: flex;
+  justify-content: end;
+}
+
+.gameStats h3{
+  color: black;
+  margin-right: 50px;
+  font-family: pixelLetter2;
+}
+
+#board{
+  border: 2px black solid;
+}
+
+.letStyle{
+  font-family: pixelLetter2;
+  font-size: 180%;
+  margin-top: 10px;
+  animation: letter-flicker2 2s linear infinite;
+}
+
+.buttonStyle2{
+  font-family: pixelLetter2;
+  font-size: 130%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  padding: 2px;
+  
+  
+}
+
+.buttonStyle2:hover{
+  background-color: black;
+  color: white;
+}
+
+
+.bodyGames{
+  background-image: url(../sources/img/tv-noise.jpg);
+  animation: animate 0.2s linear infinite;
+  border: 1px solid black;
+  max-width: 480px;
+  min-height: 100vh;
+}
+
+@keyframes animate {
+	0% { 
+    background-position: 0 0;
+  }
+	100% { 
+    background-position: 100% 100% ;
+  }
+}
+
+.containerGames{
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.containerSnake{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  margin: 20px;
+}
+
+.containerSnake:hover{
+
+  transform: scale(1.2);
+  font-family: pixelLetter2;
+}
+
+
+.containerBj:hover{
+
+  transform: scale(1.2);
+  font-family: pixelLetter2;
+
+  
+
+}
+
+.containerBj:hover h2{
+  font-family: pixelLetter2;
+}
+
+.containerSnake:hover h2{
+  font-family: pixelLetter2;
+}
+
+
+.containerBj{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.containerGames img{
+
+  width: 55%;
+}
+
+.containerGames a{
+  display: flex;
+  justify-content: center;
+}
+
+
+.containerGames h1{
+
+  font-size: 250%;
+  color: black;
+  margin: 50px auto 30px auto;
+
+}
+
+.containerGames h2{
+
+  font-family: codebar;
+  font-size: 200%;
+  letter-spacing: 10px;
+}

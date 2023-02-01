@@ -9,6 +9,12 @@ let playerSum;
 let iaSum;
 let cardHidden;
 let actualBet=0;
+
+const player=sessionStorage.getItem(`playerName`);
+document.getElementById("name2").innerHTML=`${player}`;
+
+
+
 construirDeck();
 barajarDeck();
 
@@ -35,13 +41,13 @@ document.getElementById("bet").addEventListener(`click`,() =>{
 
         if (checkBlackJack(iaHand)===false){
 
-            alert(`Tienes BlackJack. Ganas esta mano.`);
+            showWin();
             payBlackJack();
             document.getElementById("restart").removeAttribute("hidden");
             document.getElementById("bet").setAttribute("hidden","hidden");
 
         } else {
-            alert(`El juegador y la mesa tienen BlackJack. La mano queda empatada. Se devolvera la apuesta.`);
+            showDraw();
             document.getElementById("restart").removeAttribute("hidden");
             document.getElementById("bet").setAttribute("hidden","hidden");
             payDraw();
@@ -69,13 +75,14 @@ document.getElementById("hit").addEventListener(`click`,() =>{
 
     if (!isUnder21(playerHand)) {
 
-        alert(`El jugador se paso de 21. Gana la mesa.`)
         drawHiddenCard();
 
         document.getElementById("restart").removeAttribute("hidden");
         document.getElementById("hit").setAttribute("hidden","hidden");
         document.getElementById("stand").setAttribute("hidden","hidden");
         document.getElementById("double").setAttribute("hidden","hidden");
+
+        showLose();
 
     }
 
@@ -86,6 +93,10 @@ document.getElementById("stand").addEventListener(`click`,() =>{
 
     drawHiddenCard();
 
+    document.getElementById("restart").removeAttribute("hidden");
+    document.getElementById("hit").setAttribute("hidden","hidden");
+    document.getElementById("stand").setAttribute("hidden","hidden");
+    document.getElementById("double").setAttribute("hidden","hidden");
 
     var endTurn=false;
 
@@ -102,17 +113,13 @@ document.getElementById("stand").addEventListener(`click`,() =>{
 
         } else {
 
-            alert(`La mesa tiene mas de 21. Ganas la mano.`)
+            showWin();
             endTurn=true;
             payWin();
         }
 
     }
 
-    document.getElementById("restart").removeAttribute("hidden");
-    document.getElementById("hit").setAttribute("hidden","hidden");
-    document.getElementById("stand").setAttribute("hidden","hidden");
-    document.getElementById("double").setAttribute("hidden","hidden");
 
 
 })
@@ -143,17 +150,17 @@ function placeBet(valueId){
     
 
     switch (value) {
-        case "coin-1": value=1; img='<img id="coin-1" src="./sources/img/COINS/coin-1.png" width="32px">';
+        case "coin-1": value=1; img='<img id="coin-1" src="../sources/img/COINS/coin-1.png" width="32px">';
         break;
-        case "coin-5": value=5; img=`<img id="coin-5" src="./sources/img/COINS/coin-5.png" width="32px">`;
+        case "coin-5": value=5; img=`<img id="coin-5" src="../sources/img/COINS/coin-5.png" width="32px">`;
         break;
-        case "coin-10": value=10; img=`<img id="coin-10" src="./sources/img/COINS/coin-10.png" width="32px">`;
+        case "coin-10": value=10; img=`<img id="coin-10" src="../sources/img/COINS/coin-10.png" width="32px">`;
         break;
-        case "coin-50": value=50; img=`<img id="coin-50" src="./sources/img/COINS/coin-50.png" width="32px"></img>`;
+        case "coin-50": value=50; img=`<img id="coin-50" src="../sources/img/COINS/coin-50.png" width="32px"></img>`;
         break;
-        case "coin-100": value=100; img=` <img id="coin-100" src="./sources/img/COINS/coin-100.png" width="32px">`;
+        case "coin-100": value=100; img=` <img id="coin-100" src="../sources/img/COINS/coin-100.png" width="32px">`;
         break;
-        case "coin-500": value=500; img=`<img id="coin-500" src="./sources/img/COINS/coin-500.png" width="32px" alt=""></img>`;
+        case "coin-500": value=500; img=`<img id="coin-500" src="../sources/img/COINS/coin-500.png" width="32px" alt=""></img>`;
         break;
     }
 
@@ -173,9 +180,6 @@ function placeBet(valueId){
 
 
        }
-    else 
-        alert("No tienes suficientes coins para hacer esta apuesta!");
-
 
 }
 
@@ -183,7 +187,7 @@ function placeBet(valueId){
 function drawCard(card,where,dato){
     
     let newCard=document.createElement("div");
-    const dir=`./sources/img/cards/${card}.png`;
+    const dir=`../sources/img/cards/${card}.png`;
     let cardImg=document.createElement("img");
     cardImg.src=dir;
     const placeId=document.getElementById(`${where}`);
@@ -323,16 +327,17 @@ function isUnder21(hand){
 function checkWinner(){
 
     if (iaSum<playerSum){
-        alert(`Ganas esta mano.`);
+        showWin();
         payWin();
 
     }else if (iaSum>playerSum){
 
-        alert(`Pierdes esta mano.`)
+        
+        showLose();
 
     } else {
 
-        alert(`La mano esta empatada.`);
+        showDraw();
         payDraw();
     }
 }
@@ -389,5 +394,57 @@ function initTable(){
 
     refreshPoints();
     document.getElementById("bets").style.display="flex";
+
+}
+
+
+function showWin(){
+
+    let div=document.getElementById("betHolder");
+    div.innerHTML="<h3>YOU WIN!</h2>";
+
+}
+
+function showLose(){
+
+    let div=document.getElementById("betHolder");
+    div.innerHTML="<h3>YOU LOSE!</h2>";
+    gameOver();
+    
+
+}
+
+function showDraw(){
+
+    let div=document.getElementById("betHolder");
+    div.innerHTML="<h3>TIE!</h2>";
+    
+
+}
+
+function gameOver(){
+
+    if (playerCoins<1){
+
+    document.getElementById("restart").setAttribute("hidden","hidden");
+    let div=document.getElementById("betHolder");
+    div.innerHTML="<h3>YOU RUN OUT OF COINS!</h2>";
+    
+
+    setTimeout(screan,3000);
+
+    }
+
+    function screan(){
+
+    div=document.querySelector('body');
+    div.innerHTML='<p class="gameOverFx">GAME OVER</p>';
+    div.className+=" bodyGameOver";
+
+    }
+
+}
+
+function restartGame(){
 
 }
