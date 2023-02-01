@@ -10,7 +10,8 @@ let iaSum;
 let cardHidden;
 let actualBet=0;
 
-const player=sessionStorage.getItem(`playerName`);
+let player=sessionStorage.getItem(`playerName`);
+player=player.toUpperCase();
 document.getElementById("name2").innerHTML=`${player}`;
 
 
@@ -432,6 +433,12 @@ function gameOver(){
     
 
     setTimeout(screan,3000);
+    setTimeout(res,3500);
+
+    function res(){
+        document.getElementById("restart").removeAttribute("hidden");
+
+    }
 
     }
 

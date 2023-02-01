@@ -1,5 +1,5 @@
 
-const placeSize=15;
+const placeSize=10;
 const rows=30;
 const cols=30;
 
@@ -59,8 +59,8 @@ function play(){
     }
 
     board.fillStyle="black";
-    xSnake=xSnake+(xDir*15);
-    ySnake=ySnake+(yDir*15);
+    xSnake=xSnake+(xDir*10);
+    ySnake=ySnake+(yDir*10);
     board.fillRect(xSnake,ySnake,placeSize,placeSize);
     for (let i = 0; i < snakePieces.length; i++) {
         board.fillRect(snakePieces[i][0], snakePieces[i][1], placeSize, placeSize);
@@ -89,8 +89,8 @@ function play(){
 
 function newFood(){
 
-    xFood=Math.floor(Math.random()*30)*15;
-    yFood=Math.floor(Math.random()*30)*15;
+    xFood=Math.floor(Math.random()*30)*10;
+    yFood=Math.floor(Math.random()*30)*10;
 
 }
 

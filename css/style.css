@@ -29,7 +29,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    max-width: 480px;
+    max-width: 576px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -46,8 +46,8 @@
   
   color: rgb(255, 255, 255);
   font-family: pixelLetter2;
-  font-size: 200%;
-  max-width: 480px;
+  font-size: 150%;
+  max-width: 576px;
   width: 25px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -55,7 +55,7 @@
 	animation: cursor 1s step-start infinite, 
   text2 4s steps(18) alternate infinite;
   position: absolute;
-  top: 150px;
+  top: 100px;
 }
 
 .options{
@@ -89,7 +89,7 @@ h1{
 
 color:#ffffff;
 font-family: pixelLetter2;
-  font-size:90px;
+  font-size:400%;
   animation: text-flicker 3s linear infinite;
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +111,7 @@ h3{
 /*BLACKJACK GAME*/
 
 .bodyBj{
-  max-width: 480px;
+  max-width: 576px;
   min-height: 100vh;
 }
 
@@ -125,7 +125,7 @@ h3{
 }
 
 .mainBj{
-  max-width: 480px;
+  max-width: 576px;
   height: 100vh;
   background-color: rgb(0, 0, 0);
   display: flex;
@@ -139,13 +139,14 @@ h3{
   color: black;
   font-family: pixelLetter2;
   font-size: 460%;
-  max-width: 275px;
+  max-width: 576px;
   width: 21.5ch;
 	white-space: nowrap;
 	overflow: hidden;
 	border-right: 4px solid #212121;
 	animation: cursor 1s step-start infinite, 
     text 6s steps(18) alternate infinite;
+ 
 }
 
 @keyframes cursor {
@@ -159,7 +160,7 @@ h3{
     width: 0; 
   }
 	100% { 
-    width: 21.5ch; 
+    width: 10.5ch; 
   }
 }
 
@@ -173,13 +174,13 @@ h3{
 }
 
 .containerGame{
-  width: 440px;
+  min-width: 315px;
   height: 100vh;
   display: grid;
   grid-template-rows: 8% 84% 8%;
   font-family: PixelLetter2;
   letter-spacing: 6px;
-  
+  justify-content: center;
 }
 
 
@@ -296,7 +297,10 @@ button:hover{
 
 .playground{
   display: grid;
+  justify-content: center;
   grid-auto-rows: 45% 10% 45%;
+  min-width: 315px;
+
 }
 
   
@@ -310,16 +314,20 @@ button:hover{
 
 
 .playgIa{
+
   border: 1px solid white;
   display: flex;
   justify-content: center;
+  min-width: 315px;
 }
 
 
 .playgPlayer{
+  
   display: grid;
   grid-template-rows: 70% 15% 15%;
   border: 1px solid white;
+  min-width: 315px;
 }
 
 .cardsPlayer{
@@ -377,7 +385,7 @@ button:hover{
 /* PREGUNTA NOMBRE */
 
 .bodyAsk{
-  max-width: 480px;
+  max-width: 576px;
   height: 100vh;
   background-color: rgb(4, 0, 0);
   display: flex;
@@ -389,7 +397,7 @@ button:hover{
 }
 
 .bodyAsk h1{
-  font-size: 50px;
+  font-size: 280%;
 }
 
 .bodyAsk input[type='text'] {
@@ -404,7 +412,9 @@ button:hover{
 .send{
 
   font-family: pixelLetter2;
+  
   color: white;
+  font-size: 95%;
   border-bottom: 0.5px solid white;
   border-top: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -607,7 +617,7 @@ button:hover{
 #snakeBody{
   display: grid;
   grid-template-rows: 20% 60% 20%;
-  max-width: 480px;
+  max-width: 576px;
   height: 100vh;
 }
 
@@ -673,8 +683,9 @@ button:hover{
   background-image: url(../sources/img/tv-noise.jpg);
   animation: animate 0.2s linear infinite;
   border: 1px solid black;
-  max-width: 480px;
+  max-width: 576px;
   min-height: 100vh;
+
 }
 
 @keyframes animate {
@@ -688,9 +699,9 @@ button:hover{
 
 .containerGames{
 
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  display: grid;
+  grid-template-rows: 20% 40% 40%;
+  gap: 30px;
 }
 
 .containerSnake{
@@ -700,30 +711,6 @@ button:hover{
   flex-direction: column;
   gap: 8px;
   margin: 20px;
-}
-
-.containerSnake:hover{
-
-  transform: scale(1.2);
-  font-family: pixelLetter2;
-}
-
-
-.containerBj:hover{
-
-  transform: scale(1.2);
-  font-family: pixelLetter2;
-
-  
-
-}
-
-.containerBj:hover h2{
-  font-family: pixelLetter2;
-}
-
-.containerSnake:hover h2{
-  font-family: pixelLetter2;
 }
 
 
@@ -737,7 +724,7 @@ button:hover{
 
 .containerGames img{
 
-  width: 55%;
+  width: 40%;
 }
 
 .containerGames a{
@@ -748,15 +735,15 @@ button:hover{
 
 .containerGames h1{
 
-  font-size: 250%;
-  color: black;
+  font-size:150%;
+  color: rgb(0, 0, 0);
   margin: 50px auto 30px auto;
 
 }
 
 .containerGames h2{
 
-  font-family: codebar;
-  font-size: 200%;
+  font-family: pixelLetter2;
+  font-size: 150%;
   letter-spacing: 10px;
 }
