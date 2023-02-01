@@ -616,9 +616,10 @@ button:hover{
 
 #snakeBody{
   display: grid;
-  grid-template-rows: 20% 60% 20%;
+  grid-template-rows: 50% 40px 90px;
   max-width: 576px;
   height: 100vh;
+  margin-top: 120px;
 }
 
 #snakeBody h1{
@@ -642,7 +643,9 @@ button:hover{
 
 .gameStats{
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
 }
 
 .gameStats h3{
@@ -746,4 +749,43 @@ button:hover{
   font-family: pixelLetter2;
   font-size: 150%;
   letter-spacing: 10px;
+}
+
+.arrowsSnake{
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  grid-template-rows:30px 30px 30px;
+
+  justify-content: center;
+  align-items: center;
+
+  grid-template-areas: 
+  ". up ."
+  "lef . rig"
+  ". down .";
+
+}
+
+.arrowsSnake img{
+
+  width: 30px;
+}
+
+#u-arrow{
+  grid-area: up;
+  transform: rotate(180deg);
+}
+
+#r-arrow{
+  grid-area: rig;
+  transform: rotate(270deg);
+}
+
+#d-arrow{
+  grid-area: down;
+}
+
+#l-arrow{
+  grid-area: lef;
+  transform: rotate(90deg);
 }
