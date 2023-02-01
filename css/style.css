@@ -619,7 +619,7 @@ button:hover{
   grid-template-rows: 50% 40px 90px;
   max-width: 576px;
   height: 100vh;
-  margin-top: 120px;
+  margin-top: 70px;
 }
 
 #snakeBody h1{
@@ -768,7 +768,7 @@ button:hover{
 
 .arrowsSnake img{
 
-  width: 30px;
+  width: 45px;
 }
 
 #u-arrow{
