@@ -180,3 +180,46 @@ gameOver=false;
     
 
 }
+
+
+document.getElementById("u-arrow").addEventListener(`click`,() =>{
+
+    if (yDir!=1) {
+        xDir = 0;
+        yDir = -1;
+
+    }
+
+
+})
+
+
+document.getElementById("r-arrow").addEventListener(`click`,() =>{
+
+    if (xDir!=-1) {
+        xDir = 1;
+        yDir = 0;
+    }
+
+})
+
+document.getElementById("d-arrow").addEventListener(`click`,() =>{
+
+    if (yDir!=-1) {
+        xDir = 0;
+        yDir = 1;
+    }
+
+})
+
+document.getElementById("l-arrow").addEventListener(`click`,() =>{
+
+    if (xDir!=1) {
+        xDir = -1;
+        yDir = 0;
+    }
+
+})
+
+
+
