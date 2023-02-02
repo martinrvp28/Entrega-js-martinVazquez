@@ -65,7 +65,7 @@ document.getElementById("bet").addEventListener(`click`,() =>{
 
     }
 
-    } else alert("Debes ingresar tu apuesta primero.");
+    }
 
 });
 

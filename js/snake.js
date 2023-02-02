@@ -71,6 +71,8 @@ function play(){
         
 
         ggameOver();
+
+    
     }
 
     for (let i = 0; i < snakePieces.length; i++) {
@@ -78,6 +80,10 @@ function play(){
             gameOver = true;
             
             ggameOver();
+
+            document.getElementById("gameStats").setAttribute("hidden","hidden");
+
+    document.getElementById("btsArrow").hidden=true;
         }
     }
 
@@ -137,18 +143,24 @@ function runSnake(ms){
 
 function ggameOver(){
 
+
     clearInterval(interval);
     allowKeys=false;
+
+    document.getElementById("gameStats").setAttribute("hidden","hidden");
+
+    document.getElementById("btsArrow").hidden=true;
 
     let msg=document.getElementById("contCanvas");
     msg.innerHTML=`<p class="gameOverFx">GAME OVER</p><h3 class="letStyle">Your score was: ${pts}</h3><button id="playAgain" class="buttonStyle2">PLAY AGAIN</button>`
 
     let again=document.getElementById("playAgain").addEventListener("click",initSnake);
 
-
-    document.getElementById("gameStats").setAttribute("hidden","hidden");
-
-
+    document.getElementById("credits").hidden=true;
+    document.getElementById("u-arrow").hidden=true;
+    document.getElementById("r-arrow").hidden=true;
+    document.getElementById("d-arrow").hidden=true;
+    document.getElementById("l-arrow").hidden=true;
 }
 
 
@@ -171,6 +183,12 @@ gameOver=false;
 
     let credits=document.getElementById("credits");
         credits.innerHTML=`Points: 0`;
+
+    document.getElementById("credits").hidden=false;
+    document.getElementById("u-arrow").hidden=false;
+    document.getElementById("r-arrow").hidden=false;
+    document.getElementById("d-arrow").hidden=false;
+    document.getElementById("l-arrow").hidden=false;
 
 
     windowRun();
