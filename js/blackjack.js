@@ -60,7 +60,6 @@ document.getElementById("bet").addEventListener(`click`,() =>{
             document.getElementById("bet").setAttribute("hidden","hidden");
             document.getElementById("hit").removeAttribute("hidden");
             document.getElementById("stand").removeAttribute("hidden");
-            document.getElementById("double").removeAttribute("hidden");
             document.getElementById("bets").style.display="none";
 
     }
@@ -81,8 +80,6 @@ document.getElementById("hit").addEventListener(`click`,() =>{
         document.getElementById("restart").removeAttribute("hidden");
         document.getElementById("hit").setAttribute("hidden","hidden");
         document.getElementById("stand").setAttribute("hidden","hidden");
-        document.getElementById("double").setAttribute("hidden","hidden");
-
         showLose();
 
     }
@@ -97,7 +94,6 @@ document.getElementById("stand").addEventListener(`click`,() =>{
     document.getElementById("restart").removeAttribute("hidden");
     document.getElementById("hit").setAttribute("hidden","hidden");
     document.getElementById("stand").setAttribute("hidden","hidden");
-    document.getElementById("double").setAttribute("hidden","hidden");
 
     var endTurn=false;
 

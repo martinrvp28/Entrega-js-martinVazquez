@@ -112,27 +112,24 @@ h3{
 
 .bodyBj{
   max-width: 576px;
-  min-height: 100vh;
+  background-color: black;
 }
 
 .bodyGameOver{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(255, 0, 0);
   background-color: rgb(255, 255, 255);
   transition: background-color 1s linear;
 }
 
 .mainBj{
   max-width: 576px;
-  height: 100vh;
   background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
-
-
+  
 }
 
 .gameOverFx{
@@ -175,9 +172,8 @@ h3{
 
 .containerGame{
   min-width: 315px;
-  height: 100vh;
   display: grid;
-  grid-template-rows: 8% 84% 8%;
+  grid-template-rows: 80px 650px 80px;
   font-family: PixelLetter2;
   letter-spacing: 6px;
   justify-content: center;
@@ -187,6 +183,7 @@ h3{
   
 
 .avatarIa{
+  width: 430px;
   display: grid;
   grid-template-columns: 75% 25%;
   
@@ -264,9 +261,12 @@ button:hover{
   color: white;
   margin: 15px;
   font-size: 125%;
+  display: flex;
+  align-items: center;
 }
 
 .avatarPlayer{
+  width: 430px;
   display: grid;
   grid-template-columns: 25% 75%;
 
@@ -425,6 +425,87 @@ button:hover{
 
 }
 
+nav{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav img{
+
+  height: 25px;
+  
+}
+
+.gamesHeader{
+
+  max-height: 100px;
+
+}
+
+.gamesHeader h1 a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.gamesHeader ul{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+}
+
+
+.gamesHeader ul li:hover{
+  
+  transform: scale(1.2);
+  transition-duration: 500ms;
+  }
+
+.gamesHeader ul li a{
+  text-decoration: none;
+  color: black;
+  font-family: pixelLetter2;
+  font-size: 150%;
+}
+
+.gamesHeader2{
+  background-color: black;
+  margin-bottom: 10px;
+
+}
+
+.gamesHeader2 h1 a{
+  text-decoration: none;
+  color: white;
+}
+
+.gamesHeader2 ul{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+}
+
+
+.gamesHeader2 ul li:hover{
+  
+  transform: scale(1.2);
+  transition-duration: 500ms;
+  }
+
+.gamesHeader2 ul li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: pixelLetter2;
+  font-size: 150%;
+}
 
 /*ANIMACIONES*/
 
@@ -616,10 +697,13 @@ button:hover{
 
 #snakeBody{
   display: grid;
-  grid-template-rows: 50% 40px 90px;
+  grid-template-rows: 150px 100%;
   max-width: 576px;
-  height: 100vh;
-  margin-top: 70px;
+}
+
+.mainSnake{
+  display: grid;
+  grid-template-rows: 350px 50px 250px;
 }
 
 #snakeBody h1{
@@ -650,8 +734,9 @@ button:hover{
 
 .gameStats h3{
   color: black;
-  margin-right: 50px;
+  margin-right: 100px;
   font-family: pixelLetter2;
+  font-size: 125%;
 }
 
 #board{
@@ -685,7 +770,6 @@ button:hover{
 .bodyGames{
   background-image: url(../sources/img/tv-noise.jpg);
   animation: animate 0.2s linear infinite;
-  border: 1px solid black;
   max-width: 576px;
   min-height: 100vh;
 

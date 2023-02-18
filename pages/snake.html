@@ -9,26 +9,41 @@
 </head>
 <body id="snakeBody">
 
+    <header class="gamesHeader">
+
+        <nav>
+            <h1><a href="../index.html">PIX GAMES</a> </h1>
+
+            <ul>
+                <li><a href="/pages/blackJack.html">BLACKJACK</a></li>
+                <li><a href="/pages/snake.html">SNAKE</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
     
-    <div id="contCanvas" class="containerCanvas">
+    <main class="mainSnake">
+        <div id="contCanvas" class="containerCanvas">
 
-        <canvas id="board"></canvas>
-
-    </div>
-
-    <div id="gameStats" class="gameStats">
-
-        <h3 id="credits">Points:0</h3>
-
-    </div>
-
-    <div id="btsArrow" class="arrowsSnake">
-
-        <img id="u-arrow" id src="../sources/img/arrow.png" alt="">
-        <img id="r-arrow"src="../sources/img/arrow.png" alt="">
-        <img id="d-arrow" src="../sources/img/arrow.png" alt="">
-        <img id="l-arrow" src="../sources/img/arrow.png" alt="">
-    </div>
+            <canvas id="board"></canvas>
+    
+        </div>
+    
+        <div id="gameStats" class="gameStats">
+    
+            <h3 id="credits">Points:0</h3>
+    
+        </div>
+    
+        <div id="btsArrow" class="arrowsSnake">
+    
+            <img id="u-arrow" id src="../sources/img/arrow.png" alt="">
+            <img id="r-arrow"src="../sources/img/arrow.png" alt="">
+            <img id="d-arrow" src="../sources/img/arrow.png" alt="">
+            <img id="l-arrow" src="../sources/img/arrow.png" alt="">
+        </div>
+    </main>
 
 
 <script src="../js/snake.js"></script>
