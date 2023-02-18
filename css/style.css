@@ -121,6 +121,7 @@ h3{
   align-items: center;
   background-color: rgb(255, 255, 255);
   transition: background-color 1s linear;
+  height: 100vh;
 }
 
 .mainBj{
